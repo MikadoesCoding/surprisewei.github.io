@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" href="/img/seele.webp" type="img/icon" />
+    <title>Sticky Notes</title>
+    <style>
+      /* Your CSS styles here */
+    </style>
+  </head>
+  <body>
+    <textarea>
+This is a sticky note where you can leave happy birthday wishes!</textarea
+    >
+
+    <div id="create">+</div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var createButton = document.getElementById("create");
+        createButton.addEventListener("click", function () {
+          console.log("Clicked!"); // Add this line for debugging
+          var textarea = document.createElement("textarea");
+          textarea.textContent =
+            "This is a sticky note where you can leave happy birthday wishes!";
+          document.body.insertBefore(textarea, createButton);
+        });
+      });
+    </script>
+  </body>
+</html>
